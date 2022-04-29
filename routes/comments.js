@@ -17,9 +17,7 @@ router.post('/', async (req, res, next) => {
   }
 });
 
-router
-  .route('/:id')
-  .patch(async (req, res, next) => {
+router.route('/:id').patch(async (req, res, next) => {
     try {
       const result = await Comment.update(
         {
